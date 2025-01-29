@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Jitendra kumawat</title>
+    <!-- title logo -->
+    <link rel="icon" type="image/png" href="my.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* About Section Styling */
+      #about {
+        background-color: #222; /* Dark background */
+        color: white;
+        padding: 100px 30px;
+        text-align: center;
+      }
+
+      #about h2 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        color: #f1c40f; /* Yellow color */
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      /* About content section with image and text */
+      .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+
+      .about-img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        box-shadow: 0 0 30px rgba(241, 196, 15, 0.8); /* Glowing ring effect */
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+
+      .about-img:hover {
+        box-shadow: 0 0 35px rgba(241, 196, 15, 1),
+          0 0 45px rgba(241, 196, 15, 0.8); /* Glowing ring on hover */
+        transform: translateY(-10px); /* Lift effect */
+      }
+
+      .about-text {
+        max-width: 600px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #ddd;
+      }
+
+      .about-text p {
+        margin-bottom: 20px;
+      }
+
+      .about-text strong {
+        color: #f1c40f; /* Highlighted text */
+      }
+
+      @media (max-width: 768px) {
+        #about {
+          padding: 80px 20px;
+        }
+
+        #about h2 {
+          font-size: 2.5rem;
+          margin-bottom: 30px;
+        }
+
+        .about-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .about-img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .about-text {
+          font-size: 1rem;
+          max-width: 90%;
+        }
+      }
+
+      /* Styling for About Me Section Buttons */
+      .about-buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .about-buttons .btn {
+        background-color: #f1c40f; /* Yellow button */
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .about-buttons .btn:hover {
+        background-color: #af921c; /* Darker yellow on hover */
+        transform: translateY(-5px); /* Hover effect */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="logo"><a href="index.html">Jitendra's Portfolio</a></div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img src="my.png" alt="Jitendra kumawat" class="about-img" />
+          <div class="about-text">
+            <p>
+              Hello! I am Jitendra kumawat, a passionate
+              <strong>Web Designer</strong> and <strong>Developer</strong> based
+              in India. With a keen eye for design and a strong foundation in
+              coding, I aim to create user-friendly, responsive, and visually
+              appealing websites.
+            </p>
+            <p>
+              My journey into web development started with a curiosity for how
+              websites work, and since then, I've learned a lot about HTML, CSS,
+              JavaScript, and various front-end frameworks like React. I am
+              always looking to learn new skills and explore emerging
+              technologies.
+            </p>
+            <p>
+              In my free time, I enjoy working on personal projects,
+              experimenting with creative designs, and improving my coding
+              skills.
+            </p>
+            <div class="about-buttons">
+              <a href="Resume.pdf" class="btn">Download Resume</a>
+              <a href="contact.html" class="btn">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="container">
+        <h4>Let's Connect!</h4>
+        <div class="social-icons">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/jitendra-025" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <!-- LinkedIn Icon -->
+          <a
+            href="https://www.linkedin.com/in/jitendra-kumawat-25ab20336"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Email Icon -->
+          <a href="mailto:jiten86281k@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+
+        <!-- Additional Links Section -->
+        <div class="footer-links">
+          <a href="index.html"> Home</a>
+          <a href="about.html"> Resume</a>
+          <a href="projects.html"> Projects</a>
+          <a href="contact.html"> Contact</a>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Jitendra kumawat. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Toggle menu visibility on small screens
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

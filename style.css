@@ -1,0 +1,646 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #f4f4f4; /* Light text color for dark theme */
+}
+
+/* Navbar Styling */
+#navbar {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark, semi-transparent navbar */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#navbar .logo a {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f1c40f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+#navbar .nav-links {
+  display: flex;
+  gap: 35px;
+  margin-right: 60px;
+}
+
+#navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar .nav-links a:hover {
+  color: #f1c40f;
+  transform: translateY(-3px);
+}
+
+#navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f1c40f;
+  transition: width 0.3s ease;
+}
+
+#navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Menu Toggle for Mobile/Tablets */
+#navbar .menu-toggle {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+}
+
+#navbar .menu-toggle i {
+  font-size: 30px;
+  color: white;
+}
+
+/* For Tablet Screens */
+@media (max-width: 1024px) {
+  #navbar .nav-links {
+    gap: 25px; /* Adjust gap on tablets */
+  }
+
+  #navbar .logo a {
+    font-size: 28px;
+  }
+
+  #navbar .nav-links a {
+    font-size: 18px;
+  }
+}
+
+/* For Mobile and Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  #navbar .nav-links {
+    display: none; /* Hide the links initially */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #navbar .menu-toggle {
+    display: block; /* Show hamburger icon */
+  }
+
+  /* When navbar has the 'open' class, display the links */
+  #navbar.open .nav-links {
+    display: flex;
+  }
+
+  #navbar .logo a {
+    font-size: 26px; /* Adjust logo size for small screens */
+  }
+
+  #navbar .nav-links a {
+    font-size: 16px; /* Adjust link font size for small screens */
+    margin-left: 100px;
+  }
+}
+
+/* For Very Small Screens (Mobile Phones, max-width: 480px) */
+@media (max-width: 480px) {
+  #navbar .logo a {
+    font-size: 24px; /* Adjust logo size for very small screens */
+  }
+
+  #navbar .nav-links a {
+    font-size: 14px; /* Adjust font size for very small screens */
+  }
+}
+
+
+/* Hero Section */
+#hero {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 120px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+#hero img {
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(241, 196, 15, 0.8); /* Glowing ring */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  animation: glow 1.5s ease-in-out infinite;
+  margin-bottom: 20px; /* Add spacing between image and text */
+}
+
+#hero img:hover {
+  box-shadow: 0 0 35px rgba(241, 196, 15, 1), 0 0 45px rgba(241, 196, 15, 0.8); /* Glowing ring effect */
+  transform: translateY(-10px); /* Lift effect */
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#hero span {
+  color: #f1c40f;
+}
+
+#element {
+  color: #f1c40f;
+  font-size: 2rem;
+}
+
+.element {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+/* For Tablet and Mobile Screens */
+@media (max-width: 1024px) {
+  #hero {
+    padding: 100px 30px; /* Reduce padding on smaller screens */
+    text-align: center;
+  }
+
+  #hero img {
+    width: 450px; /* Reduce image size on tablets */
+    height: 450px;
+  }
+
+  #hero h1 {
+    font-size: 3rem; /* Adjust heading size */
+  }
+
+  #element, .element {
+    font-size: 1.8rem; /* Adjust element font size */
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 20px; /* Reduce padding further for small screens */
+  }
+
+  #hero img {
+    width: 300px; /* Further reduce image size */
+    height: 300px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem; /* Further reduce heading size */
+  }
+
+  #element, .element {
+    font-size: 1rem; /* Further adjust font size */
+  }
+}
+
+/* For Very Small Mobile Screens */
+@media (max-width: 480px) {
+  #hero {
+    padding: 60px 15px; /* Reduce padding on very small screens */
+  }
+
+  #hero img {
+    width: 250px; /* Adjust image size for very small screens */
+    height: 250px;
+  }
+
+  #hero h1 {
+    font-size: 2rem; /* Adjust heading size for very small screens */
+  }
+
+  #element, .element {
+    font-size: 1.3rem; /* Adjust font size for very small screens */
+  }
+}
+
+
+
+
+
+/* Skills Section */
+#skills {
+  padding: 100px 30px;
+  text-align: center;
+  background-color: #222;
+}
+
+#skills h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #f1c40f;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.skill {
+  width: 250px;
+  padding: 30px;
+  text-align: center;
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #f1c40f, 0 0 25px #f1c40f;
+}
+
+.skill i {
+  font-size: 50px;
+  color: #f1c40f;
+}
+
+.skill h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  #skills h2 {
+    font-size: 2.5rem; /* Slightly reduce font size */
+  }
+
+  .skills-container {
+    gap: 20px; /* Reduce gap between skills */
+  }
+
+  .skill {
+    width: 220px; /* Slightly reduce width for tablet */
+  }
+
+  .skill i {
+    font-size: 45px; /* Slightly reduce icon size */
+  }
+
+  .skill h3 {
+    font-size: 1.4rem; /* Adjust font size for heading */
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  #skills {
+    padding: 80px 20px; /* Reduce padding for small screens */
+  }
+
+  #skills h2 {
+    font-size: 2rem; /* Further reduce font size for small screens */
+  }
+
+  .skills-container {
+    flex-direction: column; /* Stack skills vertically */
+    gap: 20px; /* Increase gap for better spacing on mobile */
+    align-items: center;
+  }
+
+  .skill {
+    width: 80%; /* Take up more width on small screens */
+    max-width: 400px; /* Ensure cards don't grow too large */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .skill i {
+    font-size: 40px; /* Adjust icon size */
+  }
+
+  .skill h3 {
+    font-size: 1.3rem; /* Adjust font size for smaller devices */
+  }
+}
+
+/* For Very Small Mobile Screens */
+@media (max-width: 480px) {
+  #skills {
+    padding: 60px 15px; /* Further reduce padding for very small screens */
+  }
+
+  #skills h2 {
+    font-size: 1.7rem; /* Reduce font size for very small screens */
+  }
+
+  .skills-container {
+    gap: 20px; /* Adjust gap for small screens */
+  }
+
+  .skill {
+    width: 90%; /* Make skill cards take up most of the screen width */
+    max-width: 350px; /* Limit the width of skill cards */
+  }
+
+  .skill i {
+    font-size: 35px; /* Reduce icon size */
+  }
+
+  .skill h3 {
+    font-size: 1.2rem; /* Adjust font size for very small screens */
+  }
+}
+/* Projects Section */
+#projects {
+  padding: 100px 30px;
+  background-color: #222;
+}
+
+#projects h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #f1c40f;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.projects-container {
+  display: grid; /* Using grid for better control */
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 equal-width columns */
+  gap: 30px; /* Space between the boxes */
+  margin-top: 40px;
+}
+
+.project {
+  width: 90%;
+  background-color: #333;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #f1c40f, 0 0 25px #f1c40f;
+}
+
+.project img {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* Maintain a 9:16 aspect ratio */
+  border-radius: 8px;
+  object-fit: cover; /* Ensure the image fits well inside the container without stretching */
+  box-shadow: none; /* Remove the glow effect */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.project:hover img {
+  box-shadow: none; /* Remove glow on hover as well */
+}
+
+.project h3 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f1c40f;
+  text-align: center;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #ddd;
+  text-align: center;
+}
+
+.project a {
+  display: block;
+  text-align: center;
+  padding: 12px 30px;
+  background-color: #f1c40f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project a:hover {
+  background-color: #af921c;
+}
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  #projects {
+    padding: 80px 60px; /* Reduce padding on small screens */
+  }
+
+  #projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns on tablets */
+    gap: 20px; /* Slightly reduce the gap for tablets */
+    justify-items: center;
+  }
+
+  .project {
+    width: 100%; /* Full width for project cards */
+  }
+}
+
+/* For Mobile Screens */
+@media (max-width: 768px) {
+  #projects {
+    padding: 80px 20px; /* Reduce padding on small screens */
+  }
+
+  #projects h2 {
+    font-size: 2rem; /* Reduce font size */
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 20px; /* Adjust gap for mobile */
+    justify-items: center;
+  }
+
+  .project {
+    width: 90%; /* Full width for project cards */
+  }
+}
+
+/* For Very Small Mobile Screens */
+@media (max-width: 480px) {
+  #projects {
+    padding: 60px 15px; /* Further reduce padding for very small screens */
+  }
+
+  #projects h2 {
+    font-size: 1.7rem; /* Further reduce font size */
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+    gap: 15px; /* Adjust gap for better fitting */
+    justify-items: center;
+  }
+
+  .project {
+    width: 90%; /* Full width for project cards */
+  }
+
+  .project img {
+    width: 100%;
+    aspect-ratio: 4 / 6; /* Maintain a 4:6 aspect ratio */
+  }
+}
+
+/* Footer Section */
+#footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+}
+
+#footer .social-icons a {
+  color: #fff;
+  margin: 0 20px;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+#footer .social-icons a:hover {
+  color: #f1c40f;
+}
+
+#footer .footer-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+#footer .footer-links a:hover {
+  color: #f1c40f;
+}
+
+#footer .copyright {
+  margin-top: 30px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.8), 0 0 20px rgba(241, 196, 15, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(241, 196, 15, 1), 0 0 30px rgba(241, 196, 15, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.8), 0 0 20px rgba(241, 196, 15, 0.8);
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .skill {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}

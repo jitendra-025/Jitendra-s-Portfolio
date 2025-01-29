@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Jitendra kumawat</title>
+    <!-- title logo -->
+    <link rel="icon" type="image/png" href="my.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Add your internal CSS for styling here if needed */
+    </style>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="logo"><a href="index.html">Jitendra's Portfolio</a></div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container-left">
+        <h1>Hi, I'm <span>Jitendra kumawat</span></h1>
+        <div class="element">and I am passionate about</div>
+        <span id="element"></span>
+      </div>
+      <img src="my.png" alt="Jitendra kumawat" class="hero-image" />
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I’ve worked on:</p>
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project">
+            <img src="project1.jpeg" alt="Project 1" />
+            <h3>Project 1</h3>
+            <p>
+              A brief description of the project and what was achieved with it.
+            </p>
+            <a href="projects.html" target="_blank"
+              >View Project</a
+            >
+          </div>
+          <!-- Project 2 -->
+          <div class="project">
+            <img src="project2.jpeg" alt="Project 2" />
+            <h3>Project 2</h3>
+            <p>
+              A brief description of the project and what was achieved with it.
+            </p>
+            <a href="projects.html" target="_blank"
+              >View Project</a
+            >
+          </div>
+          <!-- Project 3 -->
+          <div class="project">
+            <img src="project3.jpeg" alt="Project 3" />
+            <h3>Project 3</h3>
+            <p>
+              A brief description of the project and what was achieved with it.
+            </p>
+            <a href="projects.html" target="_blank"
+              >View Project</a
+            >
+          </div>
+          <!-- Project 4 -->
+          <div class="project">
+            <img src="project4.jpeg" alt="Project 3" />
+            <h3>Project 3</h3>
+            <p>
+              A brief description of the project and what was achieved with it.
+            </p>
+            <a href="projects.html" target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="container">
+        <h4>Let's Connect!</h4>
+        <div class="social-icons">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/jitendra-025" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <!-- LinkedIn Icon -->
+          <a
+            href="https://www.linkedin.com/in/jitendra-kumawat-25ab20336"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Email Icon -->
+          <a href="mailto:jiten86281k@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+
+        <!-- Additional Links Section -->
+        <div class="footer-links">
+          <a href="index.html"> Home</a>
+          <a href="about.html"> Resume</a>
+          <a href="projects.html"> Projects</a>
+          <a href="contact.html"> Contact</a>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Jitendra kumawat. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+      // Toggle menu visibility for small screens
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+      // Initialize Typed.js for typing animation
+      var typed = new Typed("#element", {
+        strings: ["<i>Web Designer</i>", "and <i>Developer</i>"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>

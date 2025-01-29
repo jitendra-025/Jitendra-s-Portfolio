@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Jitendra's Portfolio</title>
+    <!-- title logo -->
+    <link rel="icon" type="image/png" href="my.png" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Contact Section Styling */
+      #contact {
+        background-color: #1a1a1a;
+        color: white;
+        padding: 80px 30px;
+        text-align: center;
+      }
+
+      #contact .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #contact h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #f1c40f;
+        font-weight: 700;
+      }
+
+      #contact p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: #ddd;
+      }
+
+      #contact .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      #contact .form-group label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 10px;
+        color: #f1c40f;
+      }
+
+      #contact .form-group input,
+      #contact .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        background-color: #333;
+        color: white;
+        border: 1px solid #444;
+        border-radius: 8px;
+        transition: border-color 0.3s ease;
+      }
+
+      #contact .form-group input:focus,
+      #contact .form-group textarea:focus {
+        border-color: #f1c40f;
+        outline: none;
+      }
+
+      #contact .btn-submit {
+        background-color: #f1c40f;
+        color: white;
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #contact .btn-submit:hover {
+        background-color: #af921c;
+      }
+
+      #contact .contact-info {
+        margin-top: 50px;
+      }
+
+      #contact .contact-info h3 {
+        font-size: 2rem;
+        color: #f1c40f;
+        margin-bottom: 20px;
+      }
+
+      #contact .contact-info p {
+        font-size: 1.2rem;
+        color: #ddd;
+        margin: 10px 0;
+      }
+
+      #contact .contact-info a {
+        color: #f1c40f;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      #contact .contact-info a:hover {
+        color: #af921c;
+      }
+
+      #contact .contact-info i {
+        margin-right: 10px;
+      }
+
+      /* Responsive Styles for Contact Section */
+      @media (max-width: 768px) {
+        #contact h2 {
+          font-size: 2.5rem;
+        }
+
+        #contact p {
+          font-size: 1.1rem;
+        }
+
+        #contact .form-group input,
+        #contact .form-group textarea {
+          font-size: 1rem;
+        }
+
+        #contact .btn-submit {
+          font-size: 1rem;
+          padding: 12px 25px;
+        }
+
+        #contact .contact-info h3 {
+          font-size: 1.8rem;
+        }
+
+        #contact .contact-info p {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="logo"><a href="index.html">Jitendra's Portfolio</a></div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <div class="nav-links">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          I'd love to hear from you! Feel free to reach out if you have any
+          questions or just want to connect.
+        </p>
+
+        <!-- Contact Form -->
+        <form id="contact-form">
+          <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Your Full Name" required />
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your Email Address" required />
+          </div>
+
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Other Ways to Reach Me:</h3>
+          <p><i class="fas fa-phone-alt"></i> Phone: +123 456 7890</p>
+          <p>
+            <i class="fas fa-envelope"></i> Email:
+            <a href="mailto:jiten86281k@gmail.com">jiten86281k@gmail.com</a>
+          </p>
+          <p>
+            <i class="fab fa-linkedin"></i> LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/jitendra-kumawat-25ab20336"
+              target="_blank"
+              >Visit my LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="container">
+        <h4>Let's Connect!</h4>
+        <div class="social-icons">
+          <!-- GitHub Icon -->
+          <a href="https://github.com/jitendra-025" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <!-- LinkedIn Icon -->
+          <a
+            href="https://www.linkedin.com/in/jitendra-kumawat-25ab20336"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <!-- Email Icon -->
+          <a href="mailto:jiten86281k@gmail.com"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+
+        <!-- Additional Links Section -->
+        <div class="footer-links">
+          <a href="index.html"> Home</a>
+          <a href="about.html"> Resume</a>
+          <a href="projects.html"> Projects</a>
+          <a href="contact.html"> Contact</a>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Jitendra kumawat. All Rights Reserved.</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Toggle menu visibility on small screens
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+
+
+
+
+
+
+
+
+
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (!name || !email || !message) {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            // Saving the data in localStorage
+            let messages = JSON.parse(localStorage.getItem("messages")) || [];
+            messages.push({ name, email, message });
+            localStorage.setItem("messages", JSON.stringify(messages));
+
+            alert("Message Saved! Check local storage.");
+            document.getElementById("contact-form").reset();
+        });
+
+        // Function to retrieve messages
+        function showMessages() {
+            let messages = JSON.parse(localStorage.getItem("messages")) || [];
+            console.log("Saved Messages:", messages);
+        }
+
+        showMessages(); // Call this in console to check saved messages
+
+
+    </script>
+  </body>
+</html>
